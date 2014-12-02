@@ -1,0 +1,7 @@
+<h1>This is the show view for Categories</h1>
+  <div>    
+    <p>Associated Titles: <% @category.articles.each do |article| %>
+      <li><%= link_to article.title, article %></li>
+      <% end %>
+    </p>    
+</div>
