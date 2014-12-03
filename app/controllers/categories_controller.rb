@@ -1,10 +1,9 @@
 class CategoriesController < ApplicationController
   def index
-    @categories = Category.order(name: :asc)
+    @categories = Category.all.order(name: :asc)
   end
   
-  def show
-    #@categories = Category.order(name: :asc)
+  def show    
     @category = Category.find(params[:id])
   end
 end
