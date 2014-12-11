@@ -1,4 +1,7 @@
 class ArticlesController < ApplicationController
+  
+  before_filter :authorize, only: [:new]
+  
   def index
     @articles = Article.order(title: :desc).limit(25)
   end
